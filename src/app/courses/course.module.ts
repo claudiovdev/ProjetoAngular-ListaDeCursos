@@ -3,7 +3,8 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { ReplacePipe } from "../pipe/replace.pipe";
-import { StarComponent } from "../shared/component/star/star.component";
+import { StarModule } from "../shared/component/star/star.module";
+
 import { CourseInfoComponent } from "./course-info.component";
 import { CourseListComponent } from "./course-list.component";
 
@@ -12,11 +13,13 @@ import { CourseListComponent } from "./course-list.component";
         CourseListComponent,
         CourseInfoComponent,
         ReplacePipe,
-        StarComponent
+       
+        
     ],
     imports: [
         CommonModule,
         FormsModule,
+        StarModule,
         RouterModule.forChild([
               {
                 path: 'courses/info/:id', component: CourseInfoComponent
